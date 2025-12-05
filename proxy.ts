@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const locales = ['en-US', 'fr', 'nl-NL'];
+const locales = ['en', 'vn'];
 
 function getLocale(request: NextRequest) {
     // 1. Check cookie
@@ -16,7 +16,7 @@ function getLocale(request: NextRequest) {
     }
 
     // 3. Fallback
-    return 'en-US';
+    return 'en';
 }
 
 export function proxy(request: NextRequest) {

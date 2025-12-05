@@ -4,13 +4,16 @@ import { notFound } from "next/navigation";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 }
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: LocaleLayoutProps) {
+export default async function LocaleLayout(props: LocaleLayoutProps) {
+  const params = await props.params;
+
+  const {
+    children
+  } = props;
+
   const { locale } = params; // ✅ no await
 
   if (!i18n.locales.includes(locale)) {
