@@ -17,7 +17,7 @@ export default function LanguageSwitcher() {
     }
 
     return (
-        <div>
+        <div className="text-black">
             <button onClick={() => changeLang("en")}>English</button>
             <button onClick={() => changeLang("vn")}>Việt Nam</button>
         </div>

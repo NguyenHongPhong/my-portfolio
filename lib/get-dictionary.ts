@@ -1,5 +1,5 @@
 //a helper to load the translation file
-import "server-only";
+
 import { Locale } from "../i18n-config";
 
 export async function getDictionary(locale: Locale) {

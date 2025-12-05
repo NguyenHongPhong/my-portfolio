@@ -13,10 +13,12 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  /* :root {
     --foreground: #ededed;
-  }
+  } */
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 body {
   color: var(--foreground);
