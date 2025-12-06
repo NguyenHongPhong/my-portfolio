@@ -24,7 +24,6 @@ const ThemeSwitcher = () => {
                 bgRight: darkMode.bgRight
             });
             setDarkThemeOn(true);
-
         } else {
             theme = "light";
             colors = {
@@ -36,7 +35,6 @@ const ThemeSwitcher = () => {
                 bgRight: lightMode.bgRight
             });
             setDarkThemeOn(false);
-
         }
 
         const parseJsonColor = JSON.stringify(colors);
@@ -55,6 +53,11 @@ const ThemeSwitcher = () => {
             dom.classList.add(theme);
             const convertColors = JSON.parse(colors);
             setBgColor(convertColors);
+            if (theme === 'dark') {
+                setDarkThemeOn(true);
+            } else {
+                setDarkThemeOn(false);
+            };
         };
     }, [])
 

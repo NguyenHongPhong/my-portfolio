@@ -1,6 +1,10 @@
 {
     "home": {
         "title": "Welcome",
-        "description": "This is English version"
+        "description": "This is English version",
+        "language": "Language",
+        "work": "Work",
+        "about": "About",
+        "contact": "Contact"
     }
 }

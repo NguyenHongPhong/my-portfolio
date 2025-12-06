@@ -1,6 +1,10 @@
 {
     "home": {
         "title": "Chào mừng",
-        "description": "Đây là phiên bản việt nam"
+        "description": "Đây là phiên bản việt nam",
+        "language": "Ngôn ngữ",
+        "work": "Công việc",
+        "about": "Thông tin về tôi",
+        "contact": "Liên lạc"
     }
 }
