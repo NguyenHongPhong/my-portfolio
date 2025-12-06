@@ -5,7 +5,7 @@ const Header = ({ about, contact, work, lang }: HeaderProps) => {
     return (
         <header className="@container">
             <div className="flex justify-between my-4 items-center ">
-                <h3 className="text-black dark:text-white">HONG PHONG</h3>
+                <h3 className="text-black dark:text-white font-black">HONG PHONG</h3>
                 <div className="hidden md:block">
                     <ul>
                         <li>{work}</li>
@@ -13,7 +13,7 @@ const Header = ({ about, contact, work, lang }: HeaderProps) => {
                         <li>{contact}</li>
                     </ul>
                 </div>
-                <div className="flex gap-2 items-center">
+                <div className="flex gap-5 items-center">
                     <ThemeSwitcher />
                     <LanguageSwitcher lang={lang} />
                 </div>

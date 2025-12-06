@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { lightMode, darkMode } from "@/constants";
+import { memo } from "react";
 const ThemeSwitcher = () => {
     const [bgColor, setBgColor] = useState({
         bgLeft: lightMode.bgLeft,
@@ -84,4 +85,4 @@ const ThemeSwitcher = () => {
     );
 };
 
-export default ThemeSwitcher;
+export default memo(ThemeSwitcher);

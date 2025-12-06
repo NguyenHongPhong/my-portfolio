@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import "./globals.css";
 import type { Metadata } from "next";
 import Header from "../components/Header";
-import { cookies } from "next/headers";
+import { ThemeSync } from "../components/ThemeSync";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -18,12 +18,11 @@ export const metadata: Metadata = {
 
 export default async function LocaleLayout(props: LocaleLayoutProps) {
   const params = await props.params;
-  const cookieStore = await cookies(); // now it's resolved
   const {
     children
   } = props;
 
-  const { locale } = params; // ✅ no await
+  const { locale } = params;
 
   if (!i18n.locales.includes(locale)) {
     notFound();
@@ -32,7 +31,7 @@ export default async function LocaleLayout(props: LocaleLayoutProps) {
   const dictionary = await getDictionary(locale);
 
   return (
-    <html lang={locale} className={`bg-white dark:bg-[#292E49]`}>
+    <html lang={locale} className={`bg-white dark:bg-black`}>
       <head>
         {/* Other head elements */}
         <script
@@ -55,6 +54,7 @@ export default async function LocaleLayout(props: LocaleLayoutProps) {
         />
       </head>
       <body>
+        <ThemeSync />
         <Header work={dictionary.home.work} about={dictionary.home.about} contact={dictionary.home.contact} lang={dictionary.home.language} />
         {children}
       </body>

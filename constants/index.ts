@@ -1,1 +1,1 @@
-export { lightMode, darkMode } from "./common.client";
+export { lightMode, darkMode, emailContact, linkedInContact, twitterContact } from "./common.client";

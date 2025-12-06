@@ -19,9 +19,6 @@ export default function LanguageSwitcher({ lang }: props) {
     ];
 
     function changeLang(locale: string) {
-        const theme = localStorage.getItem('theme');
-        const dom = document.documentElement;
-
         Cookies.set("NEXT_LOCALE", locale, { path: "/" });
 
         // Replace first segment of path with new locale

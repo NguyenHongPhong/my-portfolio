@@ -5,6 +5,18 @@
         "language": "Ngôn ngữ",
         "work": "Công việc",
         "about": "Thông tin về tôi",
-        "contact": "Liên lạc"
+        "contact": "Liên lạc",
+        "heading": "XIN CHÀO, TÔI LÀ",
+        "headingName": "NGUYỄN HỒNG PHONG",
+        "introduction": "Là một kỹ sư phần mềm, tôi chuyên xây dựng các ứng dụng web hiện đại, có khả năng mở rộng và tối ưu hiệu năng bằng React, Next.js và TypeScript.",
+        "introduction_2": "Với nền tảng vững chắc về lập trình SQL và thiết kế cơ sở dữ liệu, tôi phát triển các hệ thống ổn định, áp dụng clean architecture và mang đến trải nghiệm liền mạch từ frontend đến backend.",
+        "core_competencies_1": "Kỹ thuật Frontend (Tailwind CSS, Bootstrap, SCSS, Thiết kế Responsive)",
+        "core_competencies_2": "Thiết kế & Tích hợp API Backend (REST, Xác thực, Phân quyền)",
+        "core_competencies_3": "Lập trình SQL & Tối ưu hóa Cơ sở dữ liệu (MySQL, SQL)",
+        "core_competencies_4": "Clean Code, Kiến trúc có khả năng mở rộng và làm việc Agile",
+        "more": "Xem thêm...",
+        "contact_me": "LIÊN HỆ",
+        "subject_in_mail": "Tôi muốn thảo luận với bạn",
+        "content_in_mail": "Tôi muốn liên hệ với bạn"
     }
 }
