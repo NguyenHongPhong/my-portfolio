@@ -3,6 +3,8 @@ import { i18n, Locale } from "@/i18n-config";
 import { notFound } from "next/navigation";
 import "./globals.css";
 import type { Metadata } from "next";
+import Header from "../components/Header";
+import { ThemeSync } from "../components/ThemeSync";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -16,12 +18,11 @@ export const metadata: Metadata = {
 
 export default async function LocaleLayout(props: LocaleLayoutProps) {
   const params = await props.params;
-
   const {
     children
   } = props;
 
-  const { locale } = params; // ✅ no await
+  const { locale } = params;
 
   if (!i18n.locales.includes(locale)) {
     notFound();
@@ -30,9 +31,31 @@ export default async function LocaleLayout(props: LocaleLayoutProps) {
   const dictionary = await getDictionary(locale);
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={`bg-white dark:bg-black`}>
+      <head>
+        {/* Other head elements */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                (function() {
+                  try {
+                    const theme = localStorage.getItem('theme');
+                    if (theme === 'dark') {
+                      document.documentElement.classList.add('dark');
+                    } else {
+                      document.documentElement.classList.remove('dark');
+                    }
+                  } catch (e) {
+                    console.error('Error setting initial theme:', e);
+                  }
+                })();
+              `,
+          }}
+        />
+      </head>
       <body>
-        {/* you can pass dictionary via context/provider */}
+        <ThemeSync />
+        <Header work={dictionary.home.work} about={dictionary.home.about} contact={dictionary.home.contact} lang={dictionary.home.language} />
         {children}
       </body>
     </html>

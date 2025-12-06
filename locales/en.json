@@ -1,6 +1,22 @@
 {
     "home": {
         "title": "Welcome",
-        "description": "This is English version"
+        "description": "This is English version",
+        "language": "Language",
+        "work": "Work",
+        "about": "About",
+        "contact": "Contact",
+        "heading": "HI, I AM",
+        "headingName": "NGUYEN HONG PHONG",
+        "introduction": "As a Software Engineer, I specialize in building modern, scalable, and performance-focused web applications using React, Next.js, and TypeScript.",
+        "introduction_2": "With a solid foundation in SQL programming and database design, I develop robust systems that integrate clean architecture and deliver a seamless user experience from frontend to backend.",
+        "core_competencies_1": "Frontend Engineering (Tailwind CSS, Bootstrap, SCSS, Responsive Design)",
+        "core_competencies_2": "Backend API Design & Integration (REST, Authentication, Authorization)",
+        "core_competencies_3": "SQL Programming & Database Optimization (MySQL, SQL)",
+        "core_competencies_4": "Clean Code, Scalable Architecture, and Agile Collaboration",
+        "more": "see more...",
+        "contact_me": "CONTACT ME",
+        "subject_in_mail": "Contact to discuss",
+        "content_in_mail": "I want to contact to you"
     }
 }
