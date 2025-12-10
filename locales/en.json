@@ -17,6 +17,14 @@
         "more": "see more...",
         "contact_me": "CONTACT ME",
         "subject_in_mail": "Contact to discuss",
-        "content_in_mail": "I want to contact to you"
+        "content_in_mail": "I want to contact to you",
+        "portfolio_heading": "PROJECTS",
+        "portfolio_content": "Here are some of the selected projects that showcase my passion for front-end development.",
+        "podcast_page_description": "Welcome to the Podcast page, where you can explore engaging stories, useful insights, and inspiring conversations every day.",
+        "project_info": "PROJECT INFO",
+        "project_year_info": "Year",
+        "project_role_info": "Role",
+        "portfolio_page_description": "Showcasing my projects, skills, and achievements in a clean and professional portfolio. Explore my work and see what I can create.",
+        "banking_page_description": "A modern and secure banking platform that helps users manage transactions, savings, and financial insights with ease. Designed for convenience, transparency, and complete control over your money."
     }
 }

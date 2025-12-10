@@ -5,7 +5,9 @@ import { BiLogoGmail } from "react-icons/bi";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { RiTelegram2Fill } from "react-icons/ri";
 import Image from "next/image";
+import LinkPreview from "../components/LinkPreview";
 import { emailContact, linkedInContact, twitterContact } from "@/constants";
+import Link from "next/link";
 interface paramProps {
   params: Promise<{ locale: Locale }>;
 };
@@ -59,16 +61,107 @@ export default async function HomePage(props: paramProps) {
             </div>
           </div>
         </div>
-
         <div>
           <Image
             src="/avt.jpg"
             alt="hong-phong-avt"
             width={0}
             height={0}
-            className="w-full h-72 object-cover rounded-3xl"
+            className="w-full h-72 object-cover object-bottom rounded-3xl"
             sizes="100vw"
           />
+        </div>
+      </div>
+      <hr className="border-t dark:border-[#474747] border-amber-500 -mx-8 my-10" />
+      <div className="grid grid-cols-1 gap-2 md:gap-10 md:grid-cols-2">
+
+        <div>
+          <h2 className="text-black dark:text-white font-bold text-2xl">{dict.home.portfolio_heading}</h2>
+          <p className="text-black dark:text-white">{dict.home.portfolio_content}</p>
+          <div className="rounded-xl p-3 dark:bg-[#1a1a1a] my-5">
+            <LinkPreview url="https://podcast-web-eight.vercel.app/" />
+          </div>
+        </div>
+
+        <div className="text-black dark:text-white self-end">
+          <h3 className="text-2xl mb-2">Podcast Landing Page</h3>
+          <p className="dark:text-[#c7c7c7]">{dict.home.podcast_page_description}</p>
+          <div>
+            <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5">{dict.home.project_info}</div>
+            <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5 flex justify-between">
+              <span>{dict.home.project_year_info}</span>
+              <span className="text-black dark:text-[#c7c7c7]">2025</span>
+            </div>
+            <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5 flex justify-between"> <span>
+              {dict.home.project_role_info}</span>
+              <span className="text-black dark:text-[#c7c7c7]">Front-end developer</span></div>
+          </div>
+          <Link href={'https://podcast-web-eight.vercel.app/'} className="flex py-5 gap-4">
+            <div className="border-b-2 py-1 border-amber-500 dark:border-[#d3e97a] ">
+              <div className="flex gap-4">
+                <span className="text-amber-500 dark:text-[#d3e97a] font-bold">LIVE DEMO</span>
+                <GoArrowUpRight className="text-amber-500 dark:text-[#d3e97a] font-black" size={20} />
+              </div>
+            </div>
+          </Link>
+        </div>
+
+        <div>
+          <div className="rounded-xl p-3 dark:bg-[#1a1a1a] my-5">
+            <LinkPreview url="https://portfolio-arif-personal-portfolio.vercel.app/" />
+          </div>
+        </div>
+
+        <div className="text-black dark:text-white self-end">
+          <h3 className="text-2xl mb-2">Personal portfolio</h3>
+          <p className="dark:text-[#c7c7c7]">{dict.home.portfolio_page_description}</p>
+          <div>
+            <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5">{dict.home.project_info}</div>
+            <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5 flex justify-between">
+              <span>{dict.home.project_year_info}</span>
+              <span className="text-black dark:text-[#c7c7c7]">2025</span>
+            </div>
+            <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5 flex justify-between"> <span>
+              {dict.home.project_role_info}</span>
+              <span className="text-black dark:text-[#c7c7c7]">Front-end developer</span></div>
+          </div>
+          <Link href={'https://portfolio-arif-personal-portfolio.vercel.app/'} className="flex py-5 gap-4">
+            <div className="border-b-2 py-1 border-amber-500 dark:border-[#d3e97a] ">
+              <div className="flex gap-4">
+                <span className="text-amber-500 dark:text-[#d3e97a] font-bold">LIVE DEMO</span>
+                <GoArrowUpRight className="text-amber-500 dark:text-[#d3e97a] font-black" size={20} />
+              </div>
+            </div>
+          </Link>
+        </div>
+
+        <div>
+          <div className="rounded-xl p-3 dark:bg-[#1a1a1a] my-5">
+            <LinkPreview url="https://banking-psi-umber.vercel.app/" />
+          </div>
+        </div>
+
+        <div className="text-black dark:text-white self-end">
+          <h3 className="text-2xl mb-2">App banking web</h3>
+          <p className="dark:text-[#c7c7c7]">{dict.home.banking_page_description}</p>
+          <div>
+            <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5">{dict.home.project_info}</div>
+            <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5 flex justify-between">
+              <span>{dict.home.project_year_info}</span>
+              <span className="text-black dark:text-[#c7c7c7]">2025</span>
+            </div>
+            <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5 flex justify-between"> <span>
+              {dict.home.project_role_info}</span>
+              <span className="text-black dark:text-[#c7c7c7]">Front-end developer</span></div>
+          </div>
+          <Link href={'https://banking-psi-umber.vercel.app/'} className="flex py-5 gap-4">
+            <div className="border-b-2 py-1 border-amber-500 dark:border-[#d3e97a] ">
+              <div className="flex gap-4">
+                <span className="text-amber-500 dark:text-[#d3e97a] font-bold">LIVE DEMO</span>
+                <GoArrowUpRight className="text-amber-500 dark:text-[#d3e97a] font-black" size={20} />
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
