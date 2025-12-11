@@ -27,7 +27,7 @@ export default async function HomePage(props: paramProps) {
 
           <div className="flex mt-5 h-12 gap-10">
             <div className="bg-[#f1a10d] dark:bg-[#d3e97a] h-full rounded-3xl p-3 flex items-center gap-3">
-              <span className="font-bold text-white dark:text-black">{dict.home.contact_me}</span>
+              <span className="font-bold text-white dark:text-black md:text-[12px]">{dict.home.contact_me}</span>
               <div className="w-8 h-8 bg-white dark:bg-black rounded-full flex items-center justify-center">
                 <GoArrowUpRight className="text-black dark:text-white" size={20} />
               </div>
