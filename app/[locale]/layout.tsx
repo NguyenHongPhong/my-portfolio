@@ -1,6 +1,5 @@
 import { getDictionary } from "@/lib/get-dictionary";
-import { i18n, Locale } from "@/i18n-config";
-import { notFound } from "next/navigation";
+import { Locale } from "@/i18n-config";
 import "./globals.css";
 import type { Metadata } from "next";
 import Header from "../components/Header";
@@ -8,7 +7,7 @@ import { ThemeSync } from "../components/ThemeSync";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
-  params: { locale: Locale };
+  params: { locale: string };
 }
 
 export const metadata: Metadata = {
@@ -29,18 +28,8 @@ export const metadata: Metadata = {
 };
 
 
-export default async function LocaleLayout(props: LocaleLayoutProps) {
-  const params = await props.params;
-  const {
-    children
-  } = props;
-
-  const { locale } = params;
-
-  if (!i18n.locales.includes(locale)) {
-    notFound();
-  }
-
+export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
+  const locale = params.locale as "en" | "vn";
   const dictionary = await getDictionary(locale);
 
   return (
