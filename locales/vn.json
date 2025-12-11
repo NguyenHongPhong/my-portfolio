@@ -14,7 +14,7 @@
         "core_competencies_2": "Thiết kế & Tích hợp API Backend (REST, Xác thực, Phân quyền)",
         "core_competencies_3": "Lập trình SQL & Tối ưu hóa Cơ sở dữ liệu (MySQL, SQL)",
         "core_competencies_4": "Clean Code, Kiến trúc có khả năng mở rộng và làm việc Agile",
-        "more": "Xem thêm...",
+        "more": "Xem nhiều hơn về tôi",
         "contact_me": "LIÊN HỆ",
         "subject_in_mail": "Tôi muốn thảo luận với bạn",
         "content_in_mail": "Tôi muốn liên hệ với bạn",
@@ -25,6 +25,11 @@
         "project_year_info": "Năm",
         "project_role_info": "Vai trò",
         "portfolio_page_description": "Trình bày các dự án, kỹ năng và thành tựu của tôi trong một portfolio gọn gàng và chuyên nghiệp. Khám phá các tác phẩm của tôi và xem tôi có thể tạo ra những gì.",
-        "banking_page_description": "Một nền tảng ngân hàng hiện đại và an toàn, giúp người dùng quản lý giao dịch, tiết kiệm và theo dõi tài chính dễ dàng. Được thiết kế để mang lại sự tiện lợi, minh bạch và kiểm soát toàn diện nguồn tiền của bạn."
+        "banking_page_description": "Một nền tảng ngân hàng hiện đại và an toàn, giúp người dùng quản lý giao dịch, tiết kiệm và theo dõi tài chính dễ dàng. Được thiết kế để mang lại sự tiện lợi, minh bạch và kiểm soát toàn diện nguồn tiền của bạn.",
+        "about_me": "THÔNG TIN VỀ TÔI",
+        "core_competencies": "Năng lực cốt lõi",
+        "tools_used": "Những công cụ đã sử dụng",
+        "databases_used": "Cơ sở dữ liệu",
+        "view_all": "Xem tất cả"
     }
 }
