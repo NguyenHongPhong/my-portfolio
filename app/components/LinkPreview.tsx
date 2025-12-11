@@ -12,9 +12,9 @@ export default function LinkPreview({ url }: LinkPreviewProps) {
             <iframe
                 src={url}
                 className="w-full h-80 border overflow-hidden"
+                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
                 title="Link Preview"
                 style={{ overflow: 'hidden' }}
-                scrolling="no"
             />
         </div>
     );

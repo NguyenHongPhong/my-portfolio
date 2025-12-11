@@ -19,12 +19,11 @@ export default async function HomePage(props: paramProps) {
 
   return (
     <div className="@container">
-      <div className="flex flex-col gap-10">
-        <div>
+      <div className="flex flex-col gap-10 md:flex-row">
+        <div className="md:w-1/2">
           <h2 className="text-black dark:text-white font-bold text-2xl">{dict.home.heading}</h2>
           <h1 className="text-black dark:text-white font-bold text-2xl">{dict.home.headingName}</h1>
           <p className="text-black dark:text-white text-xl mt-4">{dict.home.introduction}</p>
-          <a href="#" className="text-black dark:text-white text-xl mt-3 text-center w-full block">{dict.home.more}</a>
 
           <div className="flex mt-5 h-12 gap-10">
             <div className="bg-[#f1a10d] dark:bg-[#d3e97a] h-full rounded-3xl p-3 flex items-center gap-3">
@@ -61,20 +60,76 @@ export default async function HomePage(props: paramProps) {
             </div>
           </div>
         </div>
-        <div>
+        <div className="md:w-1/2 xl:w-2/5">
           <Image
             src="/avt.jpg"
             alt="hong-phong-avt"
             width={0}
             height={0}
-            className="w-full h-72 object-cover object-bottom rounded-3xl"
+            className="w-full h-72 object-cover object-bottom rounded-3xl xl:object-[center_80%]"
             sizes="100vw"
           />
         </div>
       </div>
+
+      <hr className="border-t dark:border-[#474747] border-amber-500 -mx-8 my-10" />
+
+      <div className="flex flex-col gap-5 md:flex-row md:justify-center md:items-center">
+        <div>
+          <div className=" relative w-full rounded-xl border border-amber-500 dark:border-[#d3e97a] h-fit p-3 grid grid-cols-5 gap-2">
+            <span className="text-black dark:text-[#c7c7c7] text-lg absolute left-4 -top-6 bg-white dark:bg-black p-2"> {dict.home.tools_used}</span>
+
+            <div className="h-14 w-14 rounded-2xl p-2">
+              <img src={'/Prisma-IndigoSymbol.png'} alt="prisma-orm" />
+            </div>
+
+            <div className="h-14 w-14 rounded-2xl p-2">
+              <img src={'/DBeaver.png'} alt="dbeaver" />
+            </div>
+
+            <div className="h-14 w-14 rounded-2xl p-2">
+              <img src={'/gitkraken-plain.png'} alt="git-karen" />
+            </div>
+
+            <div className="h-14 w-14 rounded-2xl p-2">
+              <img src={'/Git.png'} alt="git" />
+            </div>
+
+            <div className="h-14 w-14 rounded-2xl p-2">
+              <img src={'/Figma.png'} alt="figma" />
+            </div>
+
+            <div className="h-14 w-14 rounded-2xl p-2">
+              <img src={'/Visual Studio Code (VS Code).png'} alt="visual-studio" />
+            </div>
+
+            <div className="h-14 w-14 rounded-2xl p-2">
+              <img src={'/Postman.png'} alt="post-man" />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className=" relative w-full rounded-xl border border-amber-500 dark:border-[#d3e97a] h-fit p-3 grid grid-cols-5 gap-2">
+            <span className="text-black dark:text-[#c7c7c7] text-lg absolute left-4 -top-5 bg-white dark:bg-black p-2"> {dict.home.databases_used}</span>
+
+            <div className="h-14 w-14 rounded-2xl p-2">
+              <img src={'/sql-server.png'} alt="sql" />
+            </div>
+
+            <div className="h-14 w-14 rounded-2xl p-2">
+              <img src={'/MySQL.png'} alt="MySQL" />
+            </div>
+
+            <div className="h-14 w-14 rounded-2xl p-2">
+              <img src={'/MongoDB.png'} alt="MongoDB" />
+            </div>
+          </div>
+        </div>
+      </div>
+
       <hr className="border-t dark:border-[#474747] border-amber-500 -mx-8 my-10" />
       <div className="grid grid-cols-1 gap-2 md:gap-10 md:grid-cols-2">
-
         <div>
           <h2 className="text-black dark:text-white font-bold text-2xl">{dict.home.portfolio_heading}</h2>
           <p className="text-black dark:text-white">{dict.home.portfolio_content}</p>
@@ -88,6 +143,10 @@ export default async function HomePage(props: paramProps) {
           <p className="dark:text-[#c7c7c7]">{dict.home.podcast_page_description}</p>
           <div>
             <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5">{dict.home.project_info}</div>
+            <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5 flex justify-between items-center">
+              <span>Tech stack</span>
+              <span className="text-black dark:text-[#c7c7c7] max-lg:text-lg">NextJS, Tailwind, Typescript</span>
+            </div>
             <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5 flex justify-between">
               <span>{dict.home.project_year_info}</span>
               <span className="text-black dark:text-[#c7c7c7]">2025</span>
@@ -117,6 +176,10 @@ export default async function HomePage(props: paramProps) {
           <p className="dark:text-[#c7c7c7]">{dict.home.portfolio_page_description}</p>
           <div>
             <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5">{dict.home.project_info}</div>
+            <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5 flex justify-between items-center">
+              <span>Tech stack</span>
+              <span className="text-black dark:text-[#c7c7c7] max-lg:text-lg">NextJS, Tailwind, Typescript</span>
+            </div>
             <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5 flex justify-between">
               <span>{dict.home.project_year_info}</span>
               <span className="text-black dark:text-[#c7c7c7]">2025</span>
@@ -146,6 +209,10 @@ export default async function HomePage(props: paramProps) {
           <p className="dark:text-[#c7c7c7]">{dict.home.banking_page_description}</p>
           <div>
             <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5">{dict.home.project_info}</div>
+            <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5 flex justify-between items-center">
+              <span>Tech stack</span>
+              <span className="text-black dark:text-[#c7c7c7] max-lg:text-lg">NextJS, Tailwind, Typescript</span>
+            </div>
             <div className="text-xl border-b-2 dark:border-[#2f2f2f] border-amber-500 py-5 flex justify-between">
               <span>{dict.home.project_year_info}</span>
               <span className="text-black dark:text-[#c7c7c7]">2025</span>
@@ -162,6 +229,34 @@ export default async function HomePage(props: paramProps) {
               </div>
             </div>
           </Link>
+        </div>
+      </div>
+
+      <div className="text-white text-center mt-3">
+        <Link className="bg-amber-500 dark:text-[#d3e97a] dark:bg-black dark:underline p-2 rounded-xl" href={'/products'}>{dict.home.view_all}</Link>
+      </div>
+
+      <div>
+        <hr className="border-t dark:border-[#474747] border-amber-500 -mx-8 my-10"></hr>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <h2 className="text-black dark:text-white font-bold text-2xl">{dict.home.about_me}</h2>
+          <div className="text-black dark:text-[#c7c7c7] ">
+            <h2 className="underline text-xl">{dict.home.core_competencies}:</h2>
+            <ul className="list-disc list-inside">
+              <li>{dict.home.core_competencies_1}</li>
+              <li>{dict.home.core_competencies_2}</li>
+              <li>{dict.home.core_competencies_3}</li>
+              <li>{dict.home.core_competencies_4}</li>
+            </ul>
+            <Link href={'https://banking-psi-umber.vercel.app/'} className="flex py-5 gap-4">
+              <div className="border-b-2 py-1 border-amber-500 dark:border-[#d3e97a]">
+                <div className="flex gap-4">
+                  <span className="text-amber-500 dark:text-[#d3e97a] font-bold">{dict.home.more}</span>
+                  <GoArrowUpRight className="text-amber-500 dark:text-[#d3e97a] font-black" size={20} />
+                </div>
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@
         "core_competencies_2": "Backend API Design & Integration (REST, Authentication, Authorization)",
         "core_competencies_3": "SQL Programming & Database Optimization (MySQL, SQL)",
         "core_competencies_4": "Clean Code, Scalable Architecture, and Agile Collaboration",
-        "more": "see more...",
+        "more": "MORE ABOUT ME",
         "contact_me": "CONTACT ME",
         "subject_in_mail": "Contact to discuss",
         "content_in_mail": "I want to contact to you",
@@ -25,6 +25,11 @@
         "project_year_info": "Year",
         "project_role_info": "Role",
         "portfolio_page_description": "Showcasing my projects, skills, and achievements in a clean and professional portfolio. Explore my work and see what I can create.",
-        "banking_page_description": "A modern and secure banking platform that helps users manage transactions, savings, and financial insights with ease. Designed for convenience, transparency, and complete control over your money."
+        "banking_page_description": "A modern and secure banking platform that helps users manage transactions, savings, and financial insights with ease. Designed for convenience, transparency, and complete control over your money.",
+        "about_me": "ABOUT ME",
+        "core_competencies": "Core Competencies",
+        "tools_used": "Tools",
+        "databases_used": "Databases",
+        "view_all": "View all"
     }
 }
