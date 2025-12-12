@@ -5,7 +5,7 @@ export default function Head({ params }: { params: { locale: string } }) {
 
     // 🔥 Bạn có thể chạy logic thoải mái
     const title =
-        locale === "vi"
+        locale === "vn"
             ? "Kinh nghiệm và sản phẩm của Nguyễn Hồng Phong"
             : "Hong Phong's Portfolio";
 

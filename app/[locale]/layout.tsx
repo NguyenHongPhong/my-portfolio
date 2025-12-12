@@ -5,6 +5,10 @@ import type { Metadata } from "next";
 import Header from "../components/Header";
 import { ThemeSync } from "../components/ThemeSync";
 
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "vn" }];
+}
+
 interface LocaleLayoutProps {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
