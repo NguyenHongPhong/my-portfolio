@@ -6,9 +6,8 @@ const Header = ({ about, contact, work, lang }: HeaderProps) => {
         <header className="@container">
             <div className="flex justify-between my-4 items-center ">
                 <h3 className="text-black dark:text-white font-black">HONG PHONG</h3>
-                <div className="hidden md:block">
-                    <ul>
-                        <li>{work}</li>
+                <div className="hidden lg:block text-black dark:text-white">
+                    <ul className="md:flex gap-5">
                         <li>{about}</li>
                         <li>{contact}</li>
                     </ul>
