@@ -36,27 +36,6 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
   return (
     <html lang={locale} className={`bg-white dark:bg-black`}>
-      <head>
-        {/* Other head elements */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-                (function() {
-                  try {
-                    const theme = localStorage.getItem('theme');
-                    if (theme === 'dark') {
-                      document.documentElement.classList.add('dark');
-                    } else {
-                      document.documentElement.classList.remove('dark');
-                    }
-                  } catch (e) {
-                    console.error('Error setting initial theme:', e);
-                  }
-                })();
-              `,
-          }}
-        />
-      </head>
       <body>
         <ThemeSync />
         <Header work={dictionary.home.work} about={dictionary.home.about} contact={dictionary.home.contact} lang={dictionary.home.language} />
