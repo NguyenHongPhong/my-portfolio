@@ -5,7 +5,7 @@
         "language": "Language",
         "work": "Work",
         "about": "About",
-        "contact": "Contact",
+        "home": "Home",
         "heading": "HI, I AM",
         "headingName": "NGUYEN HONG PHONG",
         "introduction": "As a Software Engineer, I specialize in building modern, scalable, and performance-focused web applications using React, Next.js, and TypeScript.",
@@ -48,5 +48,13 @@
             "responsibility_2": "Handled server-side logic to ensure smooth data processing and workflow",
             "responsibility_3": "Provided structural guidance and direction to other team members involved in the project"
         }
+    },
+    "webs_portfolio": {
+        "title": "MY WORKS",
+        "heading_greeting": "Hi! I'm Nguyen Hong Phong",
+        "short_description": "I focus on building stable, scalable products that deliver a smooth and meaningful user experience. Throughout my work, I have developed various projects, ranging from web interfaces to server-side logic and database design.",
+        "short_description_2": "Below are some of the featured projects I’ve created during my journey.",
+        "tech_stack_use_with": "Tech stacks",
+        "recent_ones": "RECENT ONES"
     }
 }

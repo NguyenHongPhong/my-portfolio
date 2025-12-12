@@ -5,7 +5,7 @@
         "language": "Ngôn ngữ",
         "work": "Công việc",
         "about": "Thông tin về tôi",
-        "contact": "Liên lạc",
+        "home": "Trang chủ",
         "heading": "XIN CHÀO, TÔI LÀ",
         "headingName": "NGUYỄN HỒNG PHONG",
         "introduction": "Là một kỹ sư phần mềm, tôi chuyên xây dựng các ứng dụng web hiện đại, có khả năng mở rộng và tối ưu hiệu năng bằng React, Next.js và TypeScript.",
@@ -48,5 +48,13 @@
             "responsibility_2": "Xử lý logic phía server để đảm bảo quy trình xử lý dữ liệu diễn ra mượt mà",
             "responsibility_3": "Hỗ trợ định hướng và hướng dẫn về cấu trúc hệ thống cho các thành viên khác trong dự án"
         }
+    },
+    "webs_portfolio": {
+        "title": "Một số sản phẩm của tôi",
+        "heading_greeting": "Xin chào! Tôi là Nguyễn Hồng Phong",
+        "short_description": "Tôi luôn chú trọng xây dựng sản phẩm có tính ổn định, dễ mở rộng và mang lại trải nghiệm tốt cho người dùng. Trong quá trình làm việc, tôi đã thực hiện nhiều dự án từ giao diện web, xử lý logic server đến thiết kế cơ sở dữ liệu.",
+        "short_description_2": "Dưới đây là những sản phẩm tiêu biểu mà tôi đã phát triển trong hành trình của mình.",
+        "tech_stack_use_with": "Công nghệ sử dụng",
+        "recent_ones": "CÁC SẢN PHẨM GẦN ĐÂY"
     }
 }

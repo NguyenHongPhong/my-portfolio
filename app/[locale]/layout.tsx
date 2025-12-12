@@ -42,7 +42,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
     <html lang={locale} className={`bg-white dark:bg-black`}>
       <body>
         <ThemeSync />
-        <Header work={dictionary.home.work} about={dictionary.home.about} contact={dictionary.home.contact} lang={dictionary.home.language} />
+        <Header work={dictionary.home.work} about={dictionary.home.about} home={dictionary.home.home} lang={dictionary.home.language} />
         {children}
       </body>
     </html>

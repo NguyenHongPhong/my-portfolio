@@ -1,7 +1,7 @@
 interface HeaderProps {
     work: string,
     about: string,
-    contact: string,
+    home: string,
     lang: string
 }
 

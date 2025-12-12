@@ -233,7 +233,7 @@ export default async function HomePage(props: paramProps) {
       </div>
 
       <div className="text-white text-center mt-3">
-        <Link className="bg-amber-500 dark:text-[#d3e97a] dark:bg-black dark:underline p-2 rounded-xl" href={'/products'}>{dict.home.view_all}</Link>
+        <Link className="bg-amber-500 dark:text-[#d3e97a] dark:bg-black dark:underline p-2 rounded-xl" href={'/webs-portfolio'}>{dict.home.view_all}</Link>
       </div>
 
       <div>
