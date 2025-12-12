@@ -7,7 +7,7 @@ import { ThemeSync } from "../components/ThemeSync";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: Locale }>;
 }
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "Portfolio của Nguyễn Hồng Phong",
     images: [
       {
-        url: "https://drive.google.com/file/d/1afSK0L5dmJOHa-8sXpoh11zksWdCsIrq/view?usp=drive_link",
+        url: "https://res.cloudinary.com/dd3bsow8r/image/upload/v1765506165/Screenshot_2025-12-11_182714_vp8scf.png",
         width: 1200,
         height: 630,
       },
@@ -29,7 +29,9 @@ export const metadata: Metadata = {
 
 
 export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
-  const locale = params.locale as "en" | "vn";
+
+  const { locale } = await params;
+
   const dictionary = await getDictionary(locale);
 
   return (
