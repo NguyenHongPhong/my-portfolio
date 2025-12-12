@@ -30,8 +30,8 @@ export default async function HomePage(props: paramProps) {
                                 alt="portfolio-img.jpg"
                                 width={0}
                                 height={0}
-                                className="w-full lg:w-3/5 h-72 object-cover object-bottom rounded-3xl xl:object-[center_80%]
-                                lg:translate-x-36
+                                className="w-full xl:w-3/5 h-72 object-cover object-bottom rounded-3xl xl:object-[center_80%]
+                                xl:translate-x-36
                                 "
                                 sizes="100vw"
                             />
