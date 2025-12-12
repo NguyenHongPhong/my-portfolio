@@ -167,7 +167,7 @@ export default async function HomePage(props: paramProps) {
 
         <div>
           <div className="rounded-xl p-3 dark:bg-[#1a1a1a] my-5">
-            <LinkPreview url="https://banking-psi-umber.vercel.app/" />
+            <LinkPreview url="https://pet-care-wuoi.vercel.app/" />
           </div>
         </div>
 
