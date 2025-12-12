@@ -248,7 +248,7 @@ export default async function HomePage(props: paramProps) {
               <li>{dict.home.core_competencies_3}</li>
               <li>{dict.home.core_competencies_4}</li>
             </ul>
-            <Link href={'https://banking-psi-umber.vercel.app/'} className="flex py-5 gap-4">
+            <Link href={'/about'} className="flex py-5 gap-4">
               <div className="border-b-2 py-1 border-amber-500 dark:border-[#d3e97a]">
                 <div className="flex gap-4">
                   <span className="text-amber-500 dark:text-[#d3e97a] font-bold">{dict.home.more}</span>

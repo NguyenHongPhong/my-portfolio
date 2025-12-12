@@ -31,5 +31,22 @@
         "tools_used": "Tools",
         "databases_used": "Databases",
         "view_all": "View all"
+    },
+    "about": {
+        "download_resume": "DOWNLOAD RESUME",
+        "skills": "SKILLS",
+        "short_description": "I am a web developer skilled in HTML, CSS, JavaScript, with strong UI design abilities using Figma and TailwindCSS. I have hands-on experience building applications with Node.js, React, and working with SQL databases. My goal is to create optimized, scalable, and cleanly structured products.",
+        "experiences": "EXPERIENCES",
+        "company": "COMPANY",
+        "responsibilities": "Responsibilities",
+        "go_fiber": {
+            "responsibility_1": "Developed core business logic and system functionalities using NestJS and TypeScript.",
+            "responsibility_2": "Conducted functional testing and fixed bugs to ensure system stability and reliability"
+        },
+        "tri_thuc": {
+            "responsibility_1": "Created user registration forms and validated input data before inserting into the database",
+            "responsibility_2": "Handled server-side logic to ensure smooth data processing and workflow",
+            "responsibility_3": "Provided structural guidance and direction to other team members involved in the project"
+        }
     }
 }

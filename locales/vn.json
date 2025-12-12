@@ -31,5 +31,22 @@
         "tools_used": "Những công cụ đã sử dụng",
         "databases_used": "Cơ sở dữ liệu",
         "view_all": "Xem tất cả"
+    },
+    "about": {
+        "download_resume": "Tải CV",
+        "skills": "KỸ NĂNG",
+        "short_description": "Tôi là một lập trình viên web với kiến thức vững về HTML, CSS, JavaScript và khả năng thiết kế UI bằng Figma và TailwindCSS. Tôi có kinh nghiệm phát triển ứng dụng bằng Node.js, React và làm việc hiệu quả với cơ sở dữ liệu SQL. Mục tiêu của tôi là xây dựng các sản phẩm tối ưu, rõ ràng và dễ mở rộng.",
+        "experiences": "KINH NGHIỆM",
+        "company": "Công ty",
+        "responsibilities": "Trách nhiệm",
+        "go_fiber": {
+            "responsibility_1": "Phát triển logic nghiệp vụ cốt lõi và các chức năng hệ thống bằng NestJS và TypeScript",
+            "responsibility_2": "Thực hiện kiểm thử chức năng và sửa lỗi để đảm bảo hệ thống hoạt động ổn định và đáng tin cậy"
+        },
+        "tri_thuc": {
+            "responsibility_1": "Tạo form đăng ký người dùng và kiểm tra tính hợp lệ của dữ liệu trước khi lưu vào cơ sở dữ liệu",
+            "responsibility_2": "Xử lý logic phía server để đảm bảo quy trình xử lý dữ liệu diễn ra mượt mà",
+            "responsibility_3": "Hỗ trợ định hướng và hướng dẫn về cấu trúc hệ thống cho các thành viên khác trong dự án"
+        }
     }
 }
