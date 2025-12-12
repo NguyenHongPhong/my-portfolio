@@ -7,7 +7,7 @@ import { ThemeSync } from "../components/ThemeSync";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }
 
 export const metadata: Metadata = {
