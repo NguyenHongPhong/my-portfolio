@@ -40,7 +40,7 @@ export default function LanguageSwitcher({ lang }: props) {
             </button>
 
             {open && (
-                <div className="absolute z-20 w-full bg-white border rounded shadow">
+                <div className="absolute z-20 w-full bg-white border rounded shadow dark:bg-black dark:text-white">
                     {items.map(item => (
                         <button
                             key={item.code}
