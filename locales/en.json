@@ -56,5 +56,21 @@
         "short_description_2": "Below are some of the featured projects I’ve created during my journey.",
         "tech_stack_use_with": "Tech stacks",
         "recent_ones": "RECENT ONES"
+    },
+    "QA": {
+        "title": "Quality Assurance",
+        "heading": "QA Tester",
+        "subheading": "Manual & Automation Testing Specialist",
+        "description": "As a QA Tester, I specialize in ensuring the quality and reliability of software applications through both manual and automation testing. Testing using tools such as ",
+        "selenium": "Selenium",
+        "playwright": "Playwright",
+        "robot_framework": "Robot Framework",
+        "tool": "Tools",
+        "list_checks": {
+            "check_1": "Manual Testing & Test Design",
+            "check_2": "Automation with Selenium, Playwright, Robot Framework",
+            "check_3": "Running Test with CI/CD pipelines and reporting",
+            "check_4": "Test Reporting with Allure Reports"
+        }
     }
 }

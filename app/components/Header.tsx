@@ -8,11 +8,12 @@ import { IoHome } from "react-icons/io5";
 import { BiTask } from "react-icons/bi";
 import { RiInformation2Fill } from "react-icons/ri";
 import { FaArrowRight } from "react-icons/fa6";
+import { GrDocumentTest } from "react-icons/gr";
 import { useState, useEffect, useLayoutEffect } from "react";
 import { usePathname } from "next/navigation";
 import { ThemeSync } from "./ThemeSync";
 
-const Header = ({ about, home, work, lang }: HeaderProps) => {
+const Header = ({ about, home, work, lang, QA }: HeaderProps) => {
     const [open, setOpen] = useState(false);
     const pathName = usePathname();
 
@@ -82,6 +83,13 @@ const Header = ({ about, home, work, lang }: HeaderProps) => {
                         <div className="flex gap-2 items-center">
                             <BiTask size={20} />
                             <Link id="webs-portfolio" href={'/webs-portfolio'}>{work}</Link>
+                        </div>
+                    </div>
+
+                    <div className="border-b-2 border-b-(--color-paragraph) dark:border-b-(--border-color-in-dark) p-5 flex justify-center">
+                        <div className="flex gap-2 items-center">
+                            <GrDocumentTest size={20} />
+                            <Link id="qa" href={'/qa'}>{QA}</Link>
                         </div>
                     </div>
                 </div>

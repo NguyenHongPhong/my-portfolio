@@ -7,9 +7,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { RiTelegram2Fill } from "react-icons/ri";
 import { GoArrowUpRight } from "react-icons/go";
 import { emailContact, linkedInContact, twitterContact } from "@/constants";
-interface paramProps {
-    params: Promise<{ locale: string }>;
-};
+import { paramProps } from "@/types/client.types";
 
 export default async function WebsPortfolio(props: paramProps) {
     const localeParam = await props.params;

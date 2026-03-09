@@ -56,5 +56,15 @@
         "short_description_2": "Dưới đây là những sản phẩm tiêu biểu mà tôi đã phát triển trong hành trình của mình.",
         "tech_stack_use_with": "Công nghệ sử dụng",
         "recent_ones": "CÁC SẢN PHẨM GẦN ĐÂY"
+    },
+    "QA": {
+        "title": "Kiểm thử",
+        "heading": "Kiểm thử viên",
+        "subheading": "Chuyên viên kiểm thử thủ công và tự động",
+        "description": "Là một QA Tester, tôi chuyên đảm bảo chất lượng và độ tin cậy của các ứng dụng phần mềm thông qua cả kiểm thử thủ công và tự động. Tôi có kinh nghiệm kiểm thử với các công cụ như",
+        "selenium": "Selenium",
+        "playwright": "Playwright",
+        "robot_framework": "Robot Framework",
+        "tool": "Công cụ"
     }
 }

@@ -5,10 +5,8 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { emailContact, linkedInContact, twitterContact } from "@/constants";
 import { MdOutlineFileDownload } from "react-icons/md";
 import Image from "next/image";
+import { paramProps } from "@/types/client.types";
 
-interface paramProps {
-    params: Promise<{ locale: string }>;
-};
 
 export default async function AboutPage(props: paramProps) {
     const localeParam = await props.params;
