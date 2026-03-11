@@ -71,6 +71,14 @@
             "check_2": "Automation with Selenium, Playwright, Robot Framework",
             "check_3": "Running Test with CI/CD pipelines and reporting",
             "check_4": "Test Reporting with Allure Reports"
+        },
+        "manual_section": {
+            "introduction_title": "Manual Test Cases Example",
+            "description": "Here is an example of my manual test cases"
+        },
+        "automation_section": {
+            "introduction_title": "Automation Test Example",
+            "description": "Triggering automated tests suite using"
         }
     }
 }

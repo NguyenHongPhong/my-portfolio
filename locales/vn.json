@@ -65,6 +65,20 @@
         "selenium": "Selenium",
         "playwright": "Playwright",
         "robot_framework": "Robot Framework",
-        "tool": "Công cụ"
+        "tool": "Công cụ",
+        "list_checks": {
+            "check_1": "Kiểm thử thủ công & Thiết kế kiểm thử",
+            "check_2": "Tự động hóa với Selenium, Playwright, Robot Framework",
+            "check_3": "Chạy kiểm thử với pipeline CI/CD và báo cáo",
+            "check_4": "Báo cáo kiểm thử với Allure Reports"
+        },
+        "manual_section": {
+            "introduction_title": "Ví dụ về các trường hợp kiểm thử thủ công",
+            "description": "Dưới đây là một ví dụ về các trường hợp kiểm thử thủ công của tôi"
+        },
+        "automation_section": {
+            "introduction_title": "Ví dụ về các trường hợp kiểm thử tự động",
+            "description": "Dưới đây là một ví dụ về các trường hợp kiểm thử tự động của tôi"
+        }
     }
 }
