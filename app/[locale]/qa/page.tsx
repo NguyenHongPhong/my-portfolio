@@ -3,11 +3,12 @@ import { getDictionary } from "@/lib/get-dictionary";
 import Image from "next/image";
 import StackIcon from "tech-stack-icons";
 import { IoMdCheckmark } from "react-icons/io";
-import { FaPlay } from "react-icons/fa";
+import ButtonTriggerQA from "@/app/components/QA components/ButtonTriggerQA";
 export default async function QA(props: paramProps) {
     const localeParam = await props.params;
     const { locale } = localeParam;
     const dict = await getDictionary(locale);
+
 
     return (
         <div className="@container">
@@ -105,10 +106,8 @@ export default async function QA(props: paramProps) {
 
                 {/* Automation content */}
                 <div className="flex flex-col gap-3 mt-2">
-                    <div className="flex justify-center ">
-                        <div className="w-[70%] flex justify-center items-center gap-2 md:w-3/5 h-10 rounded-md bg-blue-600 hover:bg-blue-500 hover:cursor-pointer text-white">
-                            <FaPlay /> <span>Run Automation Tests</span>
-                        </div>
+                    <div className="flex justify-center">
+                        <ButtonTriggerQA />
                     </div>
                     <div></div>
                 </div>

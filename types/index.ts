@@ -1,1 +1,1 @@
-export type { HeaderProps, paramProps } from "./client.types";
+export type { HeaderProps, paramProps, TestCase } from "./client.types";

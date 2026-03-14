@@ -10,4 +10,9 @@ interface paramProps {
     params: Promise<{ locale: string }>;
 };
 
-export type { HeaderProps, paramProps };
+type TestCase = {
+    name: string;
+    result: string;
+}
+
+export type { HeaderProps, paramProps, TestCase };
