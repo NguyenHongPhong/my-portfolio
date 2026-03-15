@@ -3,13 +3,11 @@ import { getDictionary } from "@/lib/get-dictionary";
 import Image from "next/image";
 import StackIcon from "tech-stack-icons";
 import { IoMdCheckmark } from "react-icons/io";
-import ButtonTriggerQA from "@/app/components/QA components/ButtonTriggerQA";
+import ButtonTrigger from "@/app/components/QA components/ButtonTrigger";
 export default async function QA(props: paramProps) {
     const localeParam = await props.params;
     const { locale } = localeParam;
     const dict = await getDictionary(locale);
-
-
     return (
         <div className="@container">
             <h1 className="text-black dark:text-white font-bold text-2xl mb-3 text-center">{dict.QA.heading}</h1>
@@ -107,7 +105,7 @@ export default async function QA(props: paramProps) {
                 {/* Automation content */}
                 <div className="flex flex-col gap-3 mt-2">
                     <div className="flex justify-center">
-                        <ButtonTriggerQA />
+                        <ButtonTrigger />
                     </div>
                     <div></div>
                 </div>

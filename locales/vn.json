@@ -78,7 +78,13 @@
         },
         "automation_section": {
             "introduction_title": "Ví dụ về các trường hợp kiểm thử tự động",
-            "description": "Dưới đây là một ví dụ về các trường hợp kiểm thử tự động của tôi"
+            "description": "Dưới đây là một ví dụ về các trường hợp kiểm thử tự động của tôi",
+            "button_trigger": "Chạy Bộ Thử Nghiệm",
+            "test_completed": "Hoàn thành quá trình kiểm thử!",
+            "total_test": "Tổng lượt kiểm thử",
+            "passed": "Thành công",
+            "failed": "Thất bại",
+            "success_rate": "Tỷ lệ thành công"
         }
     }
 }

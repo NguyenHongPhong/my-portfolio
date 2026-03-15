@@ -13,6 +13,20 @@ interface paramProps {
 type TestCase = {
     name: string;
     result: string;
-}
+};
 
-export type { HeaderProps, paramProps, TestCase };
+type CountdownLeftProps = {
+    setDisableTriggerBtn: React.Dispatch<React.SetStateAction<number | null>>;
+};
+
+type TestProgressProps = {
+    testcases: TestCase[];
+};
+
+type CircularProps = {
+    percentage: number;
+    size?: number;
+    strokeWidth?: number;
+};
+
+export type { HeaderProps, paramProps, TestCase, CountdownLeftProps, TestProgressProps, CircularProps };

@@ -78,7 +78,13 @@
         },
         "automation_section": {
             "introduction_title": "Automation Test Example",
-            "description": "Triggering automated tests suite using"
+            "description": "Triggering automated tests suite using",
+            "button_trigger": "Run Test Suite",
+            "test_completed": "Tests Completed!",
+            "total_test": "Total Tests",
+            "passed": "Passed",
+            "failed": "Failed",
+            "success_rate": "Success Rate"
         }
     }
 }
