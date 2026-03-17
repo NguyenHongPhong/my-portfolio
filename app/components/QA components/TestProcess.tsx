@@ -10,16 +10,9 @@ export default function TestProgress({ testcases }: TestProgressProps) {
     const locale = params.locale;
     const total = testcases.length;
     const [lang, setLang] = useState<any>({});
-
-    const successCount = testcases.filter(
-        tc => tc.result === "PASS"
-    ).length;
-
-    const failedCount = testcases.filter(
-        tc => tc.result === "FAILED"
-    ).length;
-
-    const progress = (successCount / total) * 100;
+    const [countSuccess, setCountSuccess] = useState<number>(0);
+    const [countFailed, setCountFailed] = useState<number>(0);
+    const [progress, setProgress] = useState<number>(0);
 
     useEffect(() => {
         async function fetchLang() {
@@ -31,6 +24,24 @@ export default function TestProgress({ testcases }: TestProgressProps) {
 
         fetchLang()
     }, [locale])
+
+    useEffect(() => {
+        const successCount = testcases.filter(
+            tc => tc.result === "PASS"
+        ).length;
+
+        const failedCount = testcases.filter(
+            tc => tc.result === "FAIL"
+        ).length;
+
+        const process = (successCount / total) * 100;
+
+        setCountSuccess(successCount);
+        setCountFailed(failedCount);
+        setProgress(process);
+    }, [testcases]);
+
+
     return (
         <div className="w-full mt-5">
             <div style={{
@@ -63,12 +74,12 @@ export default function TestProgress({ testcases }: TestProgressProps) {
                 </div>
                 <div className="flex gap-3 items-center">
                     <IoMdCheckmark color="green" size={30} />
-                    <p className="dark:text-white text-black text-xl">{lang.passed}: {successCount}</p>
+                    <p className="dark:text-white text-black text-xl">{lang.passed}: {countSuccess}</p>
                 </div>
                 <div className="flex gap-3 items-center">
                     <IoMdCheckmark color="green" size={30} />
                     <p className="dark:text-white text-black text-xl">{lang.failed}: <span className="text-red-600 dark:text-red-500">
-                        {failedCount}
+                        {countFailed}
                     </span></p>
                 </div>
 

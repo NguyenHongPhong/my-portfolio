@@ -19,14 +19,21 @@ const ResultTCs = () => {
             TCs = [...parsedTCs];
         }
     };
-    const total = TCs.length;
-    const successCount = TCs.filter(
-        tc => tc.result === "PASS"
-    ).length;
+    const [countSuccess, setCountSuccess] = useState<number>(0);
+    const [countFailed, setCountFailed] = useState<number>(0);
 
-    const failedCount = TCs.filter(
-        tc => tc.result === "FAILED"
-    ).length;
+    useEffect(() => {
+        const successCount = TCs.filter(
+            tc => tc.result === "PASS"
+        ).length;
+
+        const failedCount = TCs.filter(
+            tc => tc.result === "FAIL"
+        ).length;
+
+        setCountFailed(failedCount);
+        setCountSuccess(successCount);
+    }, [TCs]);
 
     useEffect(() => {
         // window.scrollTo({ top: 1330.4000244140625, behavior: 'smooth' });
@@ -55,24 +62,26 @@ const ResultTCs = () => {
 
             <div className="flex items-center flex-col gap-4 mt-6">
                 <h2 className="text-black dark:text-white text-2xl font-bold">{lang.success_rate}</h2>
-                <CircularProgress success={successCount} failed={failedCount} />
+                <CircularProgress success={countSuccess} failed={countFailed} />
                 <div className="mt-4 flex gap-5">
                     <div className="flex gap-4">
                         <FaCircle color="#6aa786" size={20} />
                         <span className="text-black dark:text-white">
-                            <span className="font-bold mr-2">{successCount}</span>
+                            <span className="font-bold mr-2">{countSuccess}</span>
                             <span>{lang.passed}</span>
                         </span>
                     </div>
                     <div className="flex gap-4">
                         <FaCircle color="#e67a7a" size={20} />
                         <span className="text-black dark:text-white">
-                            <span className="font-bold mr-2">{failedCount}</span>
+                            <span className="font-bold mr-2">{countFailed}</span>
                             <span>{lang.failed}</span>
                         </span>
                     </div>
                 </div>
             </div>
+
+            <a className="dark:text-white text-center" href="https://NguyenHongPhong.github.io/QA-automation-robot">Link report</a>
         </div>
     )
 }
