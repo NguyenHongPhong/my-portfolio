@@ -66,6 +66,7 @@
         "playwright": "Playwright",
         "robot_framework": "Robot Framework",
         "tool": "Tools",
+        "take_minutes": "This process could take a few minutes. Pls wait a moment !!!",
         "list_checks": {
             "check_1": "Manual Testing & Test Design",
             "check_2": "Automation with Selenium, Playwright, Robot Framework",
@@ -85,6 +86,11 @@
             "passed": "Passed",
             "failed": "Failed",
             "success_rate": "Success Rate"
+        },
+        "test_report": {
+            "heading": "Test report",
+            "description": "View the detail Allure report of the latest test results below",
+            "view_report": "View Allure Report"
         }
     }
 }

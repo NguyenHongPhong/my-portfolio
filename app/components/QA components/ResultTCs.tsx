@@ -2,43 +2,19 @@
 import { TestCase } from "@/types";
 import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 import TestProgress from "./TestProcess";
-import CircularProgress from "./CicularProgress";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { getDictionary } from "@/lib/get-dictionary";
-import { FaCircle } from "react-icons/fa";
+import useBearStore from "@/app/store/useStore";
 const ResultTCs = () => {
+    const data = useBearStore((state) => state.TCs);
     const params = useParams();
     const locale = params.locale;
-    let TCs: TestCase[] = [];
     const [lang, setLang] = useState<any>({});
-    const TCsInLocal = localStorage.getItem("test_cases");
-    if (TCsInLocal) {
-        const parsedTCs = JSON.parse(TCsInLocal);
-        if (Array.isArray(parsedTCs)) {
-            TCs = [...parsedTCs];
-        }
-    };
-    const [countSuccess, setCountSuccess] = useState<number>(0);
-    const [countFailed, setCountFailed] = useState<number>(0);
-
-    useEffect(() => {
-        const successCount = TCs.filter(
-            tc => tc.result === "PASS"
-        ).length;
-
-        const failedCount = TCs.filter(
-            tc => tc.result === "FAIL"
-        ).length;
-
-        setCountFailed(failedCount);
-        setCountSuccess(successCount);
-    }, [TCs]);
 
     useEffect(() => {
         // window.scrollTo({ top: 1330.4000244140625, behavior: 'smooth' });
         async function fetchLang() {
-            4
             if (typeof locale === "string") {
                 const dict = await getDictionary(locale);
                 setLang(dict.QA.automation_section);
@@ -49,39 +25,16 @@ const ResultTCs = () => {
     }, []);
 
     return (
-        <div className="mt-4">
+        <div className="mt-4 p-3">
             <div className="flex gap-3 items-center justify-center">
                 <div className="dark:hidden"><IoCheckmarkDoneCircleSharp color="green" size={30} /></div>
                 <div className="dark:block hidden"><IoCheckmarkDoneCircleSharp color="#d3e97a" size={30} /></div>
                 <span className="text-xl text-black dark:text-white">{lang.test_completed}</span>
             </div>
 
-            <TestProgress testcases={TCs} />
+            <TestProgress testcases={data} />
 
-            <div className="border-b-2 border-b-(--color-paragraph) dark:border-b-(--border-color-in-dark) p-2 flex justify-center" />
-
-            <div className="flex items-center flex-col gap-4 mt-6">
-                <h2 className="text-black dark:text-white text-2xl font-bold">{lang.success_rate}</h2>
-                <CircularProgress success={countSuccess} failed={countFailed} />
-                <div className="mt-4 flex gap-5">
-                    <div className="flex gap-4">
-                        <FaCircle color="#6aa786" size={20} />
-                        <span className="text-black dark:text-white">
-                            <span className="font-bold mr-2">{countSuccess}</span>
-                            <span>{lang.passed}</span>
-                        </span>
-                    </div>
-                    <div className="flex gap-4">
-                        <FaCircle color="#e67a7a" size={20} />
-                        <span className="text-black dark:text-white">
-                            <span className="font-bold mr-2">{countFailed}</span>
-                            <span>{lang.failed}</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <a className="dark:text-white text-center" href="https://NguyenHongPhong.github.io/QA-automation-robot">Link report</a>
+            <div className="border-b-2 border-b-(--color-paragraph) dark:border-b-(--border-color-in-dark) p-2 flex justify-center md:hidden" />
         </div>
     )
 }

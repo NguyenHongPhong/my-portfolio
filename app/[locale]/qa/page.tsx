@@ -4,31 +4,35 @@ import Image from "next/image";
 import StackIcon from "tech-stack-icons";
 import { IoMdCheckmark } from "react-icons/io";
 import ButtonTrigger from "@/app/components/QA components/ButtonTrigger";
+import PieChart from "@/app/components/QA components/PieChart";
+import WrapperResultTC from "@/app/components/QA components/WrapperResultTC";
+import ReportSection from "@/app/components/QA components/ReportSection";
+import AutomationSection from "@/app/components/QA components/AutomationSection";
 export default async function QA(props: paramProps) {
     const localeParam = await props.params;
     const { locale } = localeParam;
     const dict = await getDictionary(locale);
     return (
         <div className="@container">
-            <h1 className="text-black dark:text-white font-bold text-2xl mb-3 text-center">{dict.QA.heading}</h1>
-            <h2 className="text-black dark:text-white font-bold text-xl mb-3 text-center">{dict.QA.subheading}</h2>
+            <h1 className="text-black dark:text-white font-bold text-3xl mb-3 text-center">{dict.QA.heading}</h1>
+            <h2 className="text-black dark:text-white font-bold text-2xl mb-3 text-center">{dict.QA.subheading}</h2>
             {/* Introduction section*/}
             <div className="rounded-md dark:bg-black bg-white md:shadow-md">
                 {/* Image and description section */}
                 <div className="flex flex-col md:flex-row gap-4">
-                    <div>
+                    <div className="md:w-1/2">
                         <Image
                             src="/portfolio-img-2.jpg"
                             alt="portfolio-img-2"
                             width={0}
                             height={0}
-                            className="w-full xl:w-3/5 h-72 object-cover object-bottom rounded-3xl xl:object-[center_80%]
+                            className="w-full xl:w-3/5 h-72 lg:h-80 object-cover object-bottom rounded-3xl xl:object-[center_80%]
                                     xl:translate-x-36"
                             sizes="100vw"
                         />
                     </div>
-                    <div>
-                        <span className="text-black dark:text-white">{dict.QA.description}  <span className="font-bold text-(--text-color-primary-in-white) dark:text-(--text-color-in-dark)">{dict.QA.selenium}, {dict.QA.playwright}, {dict.QA.robot_framework}</span>.</span>
+                    <div className="md:w-1/2 md:p-3">
+                        <span className="text-black dark:text-white text-xl">{dict.QA.description}  <span className="font-bold text-(--text-color-primary-in-white) dark:text-(--text-color-in-dark)">{dict.QA.selenium}, {dict.QA.playwright}, {dict.QA.robot_framework}</span>.</span>
 
                         <div className="mt-5">
                             <div className=" relative w-full rounded-xl border border-amber-500 dark:border-[#d3e97a] h-fit p-3 grid grid-cols-5 gap-2">
@@ -58,19 +62,19 @@ export default async function QA(props: paramProps) {
                 <div className="dark:bg-[#171717] bg-[#f5f5f4] w-full p-2 text-black dark:text-white rounded-sm flex flex-col gap-2 mt-5">
                     <div className="flex gap-2">
                         <IoMdCheckmark color="green" size={20} />
-                        <p className=" truncate max-w-full">{dict.QA.list_checks.check_1}</p>
-                    </div>
-                    <div className="flex gap-2 truncate max-w-full">
-                        <IoMdCheckmark color="green" size={30} />
-                        <p className=" truncate max-w-full">{dict.QA.list_checks.check_2}</p>
-                    </div>
-                    <div className="flex gap-2 truncate max-w-full">
-                        <IoMdCheckmark color="green" size={30} />
-                        <p className=" truncate max-w-full">{dict.QA.list_checks.check_3}</p>
+                        <p className=" truncate max-w-full text-[18px]">{dict.QA.list_checks.check_1}</p>
                     </div>
                     <div className="flex gap-2 truncate max-w-full">
                         <IoMdCheckmark color="green" size={20} />
-                        <p className=" truncate max-w-full">{dict.QA.list_checks.check_4}</p>
+                        <p className=" truncate max-w-full  text-[18px]">{dict.QA.list_checks.check_2}</p>
+                    </div>
+                    <div className="flex gap-2 truncate max-w-full">
+                        <IoMdCheckmark color="green" size={20} />
+                        <p className=" truncate max-w-full  text-[18px]">{dict.QA.list_checks.check_3}</p>
+                    </div>
+                    <div className="flex gap-2 truncate max-w-full">
+                        <IoMdCheckmark color="green" size={20} />
+                        <p className=" truncate max-w-full  text-[18px]">{dict.QA.list_checks.check_4}</p>
                     </div>
                 </div>
 
@@ -81,8 +85,8 @@ export default async function QA(props: paramProps) {
 
             {/* Manual section */}
             <div>
-                <h2 className="text-black dark:text-white font-bold text-xl mb-3 text-center mt-3">{dict.QA.manual_section.introduction_title}</h2>
-                <p className="text-black dark:text-white text-center">{dict.QA.manual_section.description}</p>
+                <h2 className="text-black dark:text-white font-bold text-2xl mb-3 text-center mt-3">{dict.QA.manual_section.introduction_title}</h2>
+                <p className="text-black dark:text-white text-center text-xl">{dict.QA.manual_section.description}</p>
 
                 {/* GG sheet */}
                 <div className="my-3">
@@ -99,17 +103,18 @@ export default async function QA(props: paramProps) {
 
             {/* Automation section */}
             <div>
-                <h2 className="text-black dark:text-white font-bold text-xl mb-3 text-center mt-3">{dict.QA.automation_section.introduction_title}</h2>
-                <p className="text-black dark:text-white text-center">{dict.QA.automation_section.description} <span className="text-blue-500 dark:text-(--text-color-in-dark)">GitHub Actions</span></p>
+                <h2 className="text-black dark:text-white font-bold text-2xl mb-3 text-center mt-3">{dict.QA.automation_section.introduction_title}</h2>
+                <p className="text-black dark:text-white text-xl text-center">{dict.QA.automation_section.description} <span className="text-blue-500 dark:text-(--text-color-in-dark)">GitHub Actions</span></p>
 
                 {/* Automation content */}
-                <div className="flex flex-col gap-3 mt-2">
-                    <div className="flex justify-center">
-                        <ButtonTrigger />
-                    </div>
-                    <div></div>
-                </div>
+                <AutomationSection dict={dict} />
             </div>
+
+            {/* Line break */}
+            <div className="border-b-2 border-b-(--color-paragraph) dark:border-b-(--border-color-in-dark) p-2 flex justify-center" />
+
+            {/* Link Allure report */}
+            <ReportSection />
         </div>
     )
 }

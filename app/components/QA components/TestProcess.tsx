@@ -27,17 +27,21 @@ export default function TestProgress({ testcases }: TestProgressProps) {
 
     useEffect(() => {
         const successCount = testcases.filter(
-            tc => tc.result === "PASS"
+            tc => tc.status === "passed"
         ).length;
 
         const failedCount = testcases.filter(
-            tc => tc.result === "FAIL"
+            tc => tc.status === "failed"
+        ).length;
+
+        const brokenCount = testcases.filter(
+            tc => tc.status === "broken"
         ).length;
 
         const process = (successCount / total) * 100;
 
         setCountSuccess(successCount);
-        setCountFailed(failedCount);
+        setCountFailed(failedCount + brokenCount);
         setProgress(process);
     }, [testcases]);
 
@@ -47,7 +51,7 @@ export default function TestProgress({ testcases }: TestProgressProps) {
             <div style={{
                 width: "100%",
                 height: "20px",
-                background: "#eee",
+                background: "#74777573",
                 borderRadius: "10px",
                 overflow: "hidden"
             }}>

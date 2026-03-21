@@ -66,6 +66,7 @@
         "playwright": "Playwright",
         "robot_framework": "Robot Framework",
         "tool": "Công cụ",
+        "take_minutes": "Quá trình này có thể mất vài phút. Vui lòng chờ trong giây lát !!!",
         "list_checks": {
             "check_1": "Kiểm thử thủ công & Thiết kế kiểm thử",
             "check_2": "Tự động hóa với Selenium, Playwright, Robot Framework",
@@ -85,6 +86,11 @@
             "passed": "Thành công",
             "failed": "Thất bại",
             "success_rate": "Tỷ lệ thành công"
+        },
+        "test_report": {
+            "heading": "Báo cáo kiểm thử",
+            "description": "Xem kết quả chi tiết và mới nhất thông qua báo cáo Allure bên dưới",
+            "view_report": "Xem báo cáo"
         }
     }
 }

@@ -12,7 +12,8 @@ interface paramProps {
 
 type TestCase = {
     name: string;
-    result: string;
+    status: string;
+    duration: number
 };
 
 type CountdownLeftProps = {
@@ -29,4 +30,15 @@ type CircularProps = {
     strokeWidth?: number;
 };
 
-export type { HeaderProps, paramProps, TestCase, CountdownLeftProps, TestProgressProps, CircularProps };
+type BearState = {
+    countSuccess: number;
+    countFailed: number;
+    setSuccessCount: (value: number) => void;
+    setFailedCount: (value: number) => void;
+    setLoading: (value: boolean) => void;
+    setData: (value: TestCase[]) => void;
+    TCs: TestCase[],
+    loading: boolean
+};
+
+export type { HeaderProps, paramProps, TestCase, CountdownLeftProps, TestProgressProps, CircularProps, BearState };

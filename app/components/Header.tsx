@@ -47,6 +47,7 @@ const Header = ({ about, home, work, lang, QA }: HeaderProps) => {
                         <li><Link href={'/'}>{home}</Link></li>
                         <li><Link href={'/about'}>{about}</Link></li>
                         <li><Link href={'/webs-portfolio'}>{work}</Link></li>
+                        <li><Link href={'/qa'}>QA</Link></li>
                     </ul>
                 </div>
                 <div className="hidden md:block">

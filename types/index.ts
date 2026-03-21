@@ -1,1 +1,1 @@
-export type { HeaderProps, paramProps, TestCase, CountdownLeftProps, TestProgressProps, CircularProps } from "./client.types";
+export type { HeaderProps, paramProps, TestCase, CountdownLeftProps, TestProgressProps, CircularProps, BearState } from "./client.types";

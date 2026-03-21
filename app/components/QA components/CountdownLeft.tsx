@@ -29,7 +29,7 @@ const CountdownLeft = ({ setDisableTriggerBtn }: CountdownLeftProps) => {
 
 
     return (
-        <div className="flex justify-center items-center gap-2 md:w-3/5 h-10 rounded-md bg-blue-400  hover:cursor-not-allowed text-white"
+        <div className="flex justify-center items-center gap-2 md:w-full h-10 rounded-md bg-blue-400  hover:cursor-not-allowed text-white"
         >
             <span>{formatted}</span>
         </div>
